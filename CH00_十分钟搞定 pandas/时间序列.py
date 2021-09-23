@@ -35,3 +35,16 @@ print(ts)
 ps = ts.to_period()
 print(ps)
 print(ps.to_timestamp())
+print('4、 时期和时间戳之间的转换使得可以使用一些方便的算术函数。')
+prng = pd.period_range('1990Q1', '2000Q4', freq='Q-NOV')
+print(prng)
+# 以季度Q【季度为频率】生成13个时间
+x = pd.period_range("2019-01", periods=13, freq="Q")
+
+# 以季度Q【年为频率】生成13个时间
+x = pd.period_range("2019-01", periods=13, freq="Y")
+
+# 以季度Q【2个月为频率】生成13个时间
+x = pd.period_range("2019-01", periods=13, freq="2m")
+# 对于某些频率，你可以指定一个锚定后缀【后缀代表一年结束的月份,默认是12月份结束】
+# 其他1-12月为结束的后缀都和单词前三个字母大写，请查询表格
